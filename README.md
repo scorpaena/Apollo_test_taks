@@ -16,7 +16,7 @@ To achieve this, application has to have two models:
         user: fk field, 
         event_type: fk field, 
         info: JSON field, 
-        timestamp-: datetime field, 
+        timestamp: datetime field, 
         created_at: auto_now datetime field
     ) 
     
@@ -39,7 +39,7 @@ https://www.tecmint.com/install-postman-on-linux-desktop/
     `DATABASE_USER=postgres`  
     `DATABASE_PASS=qwerty`  
     
-Note: values are shown for reference only and may differ, depending on your db settings. 
+Note: values are shown for reference only and may differ, depending on your db settings.  
 5. Perform migration:
     `python manage.py migrate`
 
@@ -52,7 +52,7 @@ Instructions
 3. Open the Postman, go to http://127.0.0.1:8000/user/login, choose method POST and in request body fill in 'username' and 'password', created at the step 1.
 4. Obtain and copy the token in the response body.
 5. Go to http://127.0.0.1:8000/event/type, choose method POST and in request body fill in event type 'name', in request headers key put 'Authorization', value 'Token <Ctrl+V to past copied token>'
-6. Go to http://127.0.0.1:8000/event/, choose method POST and in request body fill the following keys / values:
+6. Go to http://127.0.0.1:8000/event/, choose method POST and in request body fill the following keys / values:  
     `KEY                     Value`
     `event_type              1`
     `info                    {"key1": "value1", "key2": "value2"}` 
