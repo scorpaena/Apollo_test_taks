@@ -2,12 +2,15 @@ Abstract
 ========
 This is a test task for Apollo co. to assess my skills for the Junior Python (Django/DRF) position.
 The task itself was to create a simple event management system, where current user could create (POST) events in the following format:
+    
     {
     "event_type": <event_type_name>
     "info": <anybody json>
     "timestamp": <datetime>
     }
+    
 To achieve this, application has to have two models:
+    
     Event(
         id, 
         user: fk field, 
@@ -30,10 +33,12 @@ pip install -r requirements.txt
 https://www.tecmint.com/install-postman-on-linux-desktop/
 3. Create a new database using PostgreSQL.
 4. Create a new .env file in the directory, where settings.py file is located; open the file and fill in the following:
+    
     SECRET_KEY=t3tqew(dj%b0#nzqk8=dc-&e5&&s=42@hzr7o@n-lq(-q)b!ql
     DATABASE_NAME=testtask
     DATABASE_USER=postgres
     DATABASE_PASS=qwerty
+    
 Note: values are shown for reference only and may differ, depending on your db settings. 
 5. Perform migration:
     python manage.py migrate
