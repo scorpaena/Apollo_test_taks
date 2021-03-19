@@ -53,9 +53,8 @@ Instructions
 4. Obtain and copy the token in the response body.
 5. Go to http://127.0.0.1:8000/event/type, choose method POST and in request body fill in event type 'name', in request headers key put 'Authorization', value 'Token <Ctrl+V to past copied token>'
 6. Go to http://127.0.0.1:8000/event/, choose method POST and in request body fill the following keys / values:  
-    `KEY                     Value`
-    `event_type              1`
-    `info                    {"key1": "value1", "key2": "value2"}` 
+    `KEY: event_type   |     VALUE: 1`   
+    `KEY: info         |     VALUE: {"key1": "value1", "key2": "value2"}`   
 7. Use method GET to watch the result.
 8. Go to http://127.0.0.1:8000/user/logout, choose method GET to logout the current user.
 
