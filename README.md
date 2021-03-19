@@ -28,7 +28,7 @@ To achieve this, application has to have two models:
 Preparation
 ----------
 1. Make sure to install all the required modules (see file 'requirements.txt'):
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 2. Install Postman (follow the URL provided):
 https://www.tecmint.com/install-postman-on-linux-desktop/
 3. Create a new database using PostgreSQL.
