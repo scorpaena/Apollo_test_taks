@@ -2,7 +2,7 @@ from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.status import (
     HTTP_200_OK,
-    HTTP_404_NOT_FOUND
+    HTTP_401_UNAUTHORIZED,
 )
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate, logout, login
@@ -21,7 +21,7 @@ class Login(generics.ListCreateAPIView):
         user = authenticate(username=username, password=password)
         if not user:
             data = {'error': 'Check username/password'}
-            return Response(data, status=HTTP_404_NOT_FOUND)
+            return Response(data, status=HTTP_401_UNAUTHORIZED)
         else:
             token, _ = Token.objects.get_or_create(user=user)
             login(request, user)
